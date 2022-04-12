@@ -2,7 +2,7 @@ input.onButtonPressed(Button.A, function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Violet))
 })
 input.onButtonPressed(Button.AB, function () {
-    while (!(input.buttonIsPressed(Button.A)) && !(input.buttonIsPressed(Button.B))) {
+    while (!(input.buttonIsPressed(Button.A)) || !(input.buttonIsPressed(Button.B))) {
         strip.showRainbow(1, 360)
         strip.rotate(1)
         strip.show()
